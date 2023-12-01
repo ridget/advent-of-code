@@ -23,7 +23,19 @@ RSpec.describe Puzzle do
     end
 
     describe '.part2' do
-      let(:expected_answer) { nil }
+      let(:provided_input) do
+        %w(
+          two1nine
+          eightwothree
+          abcone2threexyz
+          xtwone3four
+          4nineeightseven2
+          zoneight234
+          7pqrstsixteen
+        )
+      end
+
+      let(:expected_answer) { 281 }
 
       it 'returns the correct result' do
         expect(described_class.part2(provided_input)).to eq(expected_answer)
