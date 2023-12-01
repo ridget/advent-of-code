@@ -24,7 +24,7 @@ class Puzzle
 
     def part2(input)
       re = /(?=(#{Regexp.union(NUM_MAP.keys)}))/
-        new_inputs = input.map { |str| str.gsub(re) { NUM_MAP.values_at(*Regexp.last_match.captures.flatten).join } }
+      new_inputs = input.map { |str| str.gsub(re) { NUM_MAP.values_at(*Regexp.last_match.captures.flatten).join } }
       part1(new_inputs)
     end
   end
